@@ -5,6 +5,8 @@ public class HelloWorld {
 		// TODO Auto-generated method stub
 		Employee empOne = new Employee("James Smith");
 		Employee empTwo = new Employee("Yusuf Savas");
+		boolean result = empOne instanceof Employee;
+		System.out.println("Result:"+ result );
 		
 		empOne.empAge(26);
 		empOne.empDesignation("Software Engineer");
@@ -14,6 +16,18 @@ public class HelloWorld {
 		empTwo.empDesignation("Junior");
 		empTwo.empSalary(1000);
 		empTwo.printEmployee();
+		
+		int [] numbers = {10,20,30,40};
+		for(int x: numbers) {
+			System.out.print(x);
+			System.out.print(",");
+		}
+		String[] names = {"Yusuf","Savas","Test"};
+		for(String name: names) {
+			System.out.print(name);
+			System.out.print(",");
+		}
+		
 
 	}
 

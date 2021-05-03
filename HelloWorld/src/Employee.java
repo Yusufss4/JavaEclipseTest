@@ -26,6 +26,7 @@ public void printEmployee() {
      System.out.println("Age:" + age );
      System.out.println("Designation:" + designation );
      System.out.println("Salary:" + salary);
+   
 }
 
 }
