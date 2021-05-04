@@ -22,13 +22,24 @@ public class HelloWorld {
 			System.out.print(x);
 			System.out.print(",");
 		}
-		String[] names = {"Yusuf","Savas","Test"};
+		String[] names = {"Yusuf","Savsas","Test"};
 		for(String name: names) {
 			System.out.print(name);
 			System.out.print(",");
 		}
 		
+		System.out.println("\nARRAY TEST -> ");
+		ArrayTest arrayTest  = new ArrayTest();
+		int[] newArray = {1,2,3,4};
+		arrayTest.testTheArray(newArray);
+		ArrayTest.testTheArray2(newArray);
+		newArray = ArrayTest.reverseTheArray(newArray);
+		ArrayTest.testTheArray2(newArray);
+		System.out.println("\nARRAY TEST FINISHED -> ");
 
+		System.out.println("\nDATE TEST -> ");
+		DateDemo.testTheDate();
+		System.out.println("\nDATE TEST FINISHED -> ");
 	}
 
 }
