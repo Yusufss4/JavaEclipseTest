@@ -5,15 +5,13 @@ public class Event {
 	int eventID;
 	String eventLocation;
 	ArrayList<String> AtendeesForTheEvent;
-	public void addAtendeesToTheEvent(ArrayList<String> Atendees) {
-		this.AtendeesForTheEvent = Atendees;
+	AtendeeList AtendeeListForTheEvent = new AtendeeList();
+	public void addAtendeListToTheEvent(AtendeeList AtendeeListForTheEvent) {
+		this.AtendeeListForTheEvent = AtendeeListForTheEvent;
 	}
 	public void getAtendees() {
 		System.out.println("\nAtendees in the event");
-		 for (int i = 0; i < AtendeesForTheEvent.size(); i++) {
-		        System.out.println(AtendeesForTheEvent.get(i));
-		      }
-		
+			 AtendeeListForTheEvent.getList2();
 	}
 	
 

@@ -30,6 +30,9 @@ public class AtendeeList {
 	 public ArrayList<String> getList() {
      return cars;
 	 }
+	 public int size() {
+		 return this.EmployeesInTheList.size();
+	 }
 	 
 	 public ArrayList<String> getList2() {
 	    for (int i = 0; i < this.EmployeesInTheList.size(); i++) {

@@ -50,9 +50,9 @@ public class HelloWorld {
 		
 		
 		
-		//Event exampleEvent = new Event();
-		//exampleEvent.addAtendeesToTheEvent(richList.getList());
-		//exampleEvent.getAtendees();
+		Event exampleEvent = new Event();
+		exampleEvent.addAtendeListToTheEvent(richList);
+		exampleEvent.getAtendees();
 		
 	
 		
