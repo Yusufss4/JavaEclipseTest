@@ -40,6 +40,25 @@ public class HelloWorld {
 		System.out.println("\nDATE TEST -> ");
 		DateDemo.testTheDate();
 		System.out.println("\nDATE TEST FINISHED -> ");
+		
+		System.out.println("\nARRAY LÝST TEST -> ");
+		
+		AtendeeList richList = new AtendeeList();
+		richList.ReadyAtendeeListOne();
+		richList.addElementToList(empOne);
+		richList.getList2();
+		
+		
+		
+		//Event exampleEvent = new Event();
+		//exampleEvent.addAtendeesToTheEvent(richList.getList());
+		//exampleEvent.getAtendees();
+		
+	
+		
+		System.out.println("\nARRAY LÝST TEST  FINISHED -> ");
+		
+		
 	}
 
 }
