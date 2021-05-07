@@ -30,8 +30,7 @@ public class Event {
 		return 1;
 	};
 
-	public void setEventName(String eventName) {
-		this.eventName = eventName;
+	public void setEventName() {
 	}
 
 	public void setLocation() {
