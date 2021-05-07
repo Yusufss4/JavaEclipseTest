@@ -27,7 +27,7 @@ public class Event {
 	}
 
 	public int getAttendeeNumber() {
-		return 2;
+		return 3;
 	};
 
 	public void setEventName() {
