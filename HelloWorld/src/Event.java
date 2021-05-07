@@ -27,13 +27,15 @@ public class Event {
 	}
 
 	public int getAttendeeNumber() {
-		return 3;
+		return 1;
 	};
 
-	public void setEventName() {
+	public void setEventName(String eventName) {
+		this.eventName = eventName;
 	}
 
-	public void setLocation() {
+	public void setLocation(String eventLocation) {
+		this.eventLocation = eventLocation;
 	}
 
 	public void setDate() {
@@ -42,7 +44,8 @@ public class Event {
 	public void getEventDetails() {
 	}
 
-	public void setManagerId() {
+	public void setManagerId(int managerId) {
+		this.managerId = managerId;
 	}
 
 }
