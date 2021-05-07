@@ -1,5 +1,5 @@
 
-public class HelloWorld {
+public class Main {
 	public static void main(String[] args) {
 
 		System.out.println("\nCreating attendees -> ");
@@ -16,10 +16,10 @@ public class HelloWorld {
 		atnTwo.getAttendeeDetails();
 
 		System.out.println("\nAdding attendees to the list -> ");
-		AtendeeList richList = new AtendeeList();
-		richList.ReadyAtendeeListOne();
-		richList.addElementToList(atnOne);
-		richList.getList2();
+		AttendeeList richList = new AttendeeList();
+		richList.PopulateExampleAtendeeList();
+		richList.addAttendeeToList(atnOne);
+		richList.getAttendeeList();
 
 		Event exampleEvent = new Event();
 		exampleEvent.addAtendeListToTheEvent(richList);

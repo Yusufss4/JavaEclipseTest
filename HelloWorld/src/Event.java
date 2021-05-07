@@ -12,18 +12,18 @@ public class Event {
 	int eventType;
 	Date eventDate = new Date();
 	String eventLocation;
-	AtendeeList AttendeeListForTheEvent = new AtendeeList();
+	AttendeeList AttendeeListForTheEvent = new AttendeeList();
 
 	Event() {
 	} // Constructor
 
-	public void addAtendeListToTheEvent(AtendeeList AttendeeListForTheEvent) {
+	public void addAtendeListToTheEvent(AttendeeList AttendeeListForTheEvent) {
 		this.AttendeeListForTheEvent = AttendeeListForTheEvent;
 	}
 
 	public void getAtendees() {
-		System.out.println("\nAtendees in the event");
-		AttendeeListForTheEvent.getList2();
+		System.out.println("\nAttendees in the event");
+		AttendeeListForTheEvent.getAttendeeList();
 	}
 
 	public int getAttendeeNumber() {
