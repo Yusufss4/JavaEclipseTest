@@ -41,7 +41,16 @@ public class Event {
 	public void setDate() {
 	}
 
+	public void getEventDetails(Concert exampleConcert) {
+		System.out.println("Full Name:" + eventName);
+		System.out.println("Event Type:" + eventType);
+		System.out.println("Singer Name:" + exampleConcert.singerName);
+		System.out.println("Event Name:" + exampleConcert.eventName);
+	}
+	
 	public void getEventDetails() {
+		System.out.println("Full Name:" + eventName);
+		System.out.println("Event Type:" + eventType);
 	}
 
 	public void setManagerId(int managerId) {

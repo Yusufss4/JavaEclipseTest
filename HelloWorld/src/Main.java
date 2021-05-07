@@ -28,6 +28,14 @@ public class Main {
 		System.out.println("\nTesting the date -> ");
 		DateDemo.testTheDate();
 		System.out.println("\nDate test is finished -> ");
+		
+		Concert exampleConcert  = new Concert();
+		exampleConcert.setEventName("Colorify");
+		exampleConcert.addAtendeListToTheEvent(richList);
+		exampleConcert.setSingerName("DeadMau5");
+		exampleConcert.getEventDetails(exampleConcert);
+		
+		
 	}
 
 }
