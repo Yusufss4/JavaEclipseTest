@@ -21,9 +21,9 @@ public class Main {
 		richList.addAttendeeToList(atnOne);
 		richList.getAttendeeList();
 
-		Event exampleEvent = new Event();
-		exampleEvent.addAtendeListToTheEvent(richList);
-		exampleEvent.getAtendees();
+		//Event exampleEvent = new Event();
+		//exampleEvent.addAtendeListToTheEvent(richList);
+		//exampleEvent.getAtendees();
 
 		System.out.println("\nTesting the date -> ");
 		DateDemo.testTheDate();
@@ -33,8 +33,7 @@ public class Main {
 		exampleConcert.setEventName("Colorify");
 		exampleConcert.addAtendeListToTheEvent(richList);
 		exampleConcert.setSingerName("DeadMau5");
-		exampleConcert.getEventDetails(exampleConcert);
-		
+		exampleConcert.getEventDetails();
 		
 	}
 

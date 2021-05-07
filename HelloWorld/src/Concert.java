@@ -1,7 +1,7 @@
 public class Concert extends Event {
 	
-	private String singerName;
-	private int musicType;
+	protected String singerName;
+	protected int musicType;
 
 	Concert() {
 		super.eventType = 1;
@@ -13,6 +13,12 @@ public class Concert extends Event {
 	public void setMusicType(int musicType)
 	{
 		this.musicType = musicType;
+	}
+	
+	void getEventDetails() {
+		System.out.println("Event Name:" + eventName);
+		System.out.println("Event Type:" + eventType);
+		System.out.println("Singer Name:" + singerName);
 	}
 
 
