@@ -38,7 +38,8 @@ abstract class Event {
 		this.eventLocation = eventLocation;
 	}
 
-	public void setDate() {
+	public void setDate(Date eventDate) {
+		this.eventDate = eventDate;
 	}
 
 	public void setManagerId(int managerId) {
@@ -46,5 +47,6 @@ abstract class Event {
 	}
 	
 	abstract void getEventDetails();
+
 
 }
