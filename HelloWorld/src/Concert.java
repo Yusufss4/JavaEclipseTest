@@ -25,7 +25,7 @@ public class Concert extends Event {
 		System.out.println("Event Name:" + eventName);
 		System.out.println("Event Type:" + eventType);
 		System.out.println("Singer Name:" + singerName);
-		System.out.println("Menu Details"); 
+		System.out.println("Menu Details1"); 
 		concertMenu.getMenu();
 		super.getAtendees();
 		
