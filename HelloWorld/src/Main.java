@@ -34,6 +34,8 @@ public class Main {
 		exampleConcert.addAtendeListToTheEvent(richList);
 		exampleConcert.setSingerName("DeadMau5");
 		exampleConcert.getEventDetails();
+		exampleConcert.getAverageAgeForTheEvent();
+		
 		
 		ConcertMenu newMenu = new ConcertMenu(); 
 		newMenu.getAvailableMenuStyles();

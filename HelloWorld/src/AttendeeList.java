@@ -17,10 +17,20 @@ public class AttendeeList {
 		return this.AttendeesInTheList.size();
 	}
 
+	public float getAverageAgeForTheList() {
+		float avarageAttendeeAge = 0;
+		int AttendeeListSize = this.AttendeesInTheList.size();
+		for (int i = 0; i < AttendeeListSize; i++) {
+			avarageAttendeeAge +=  this.AttendeesInTheList.get(i).getAttendeeAge();
+		}
+		return avarageAttendeeAge/AttendeeListSize;
+	}
+	
 	public void getAttendeeList() {
 		for (int i = 0; i < this.AttendeesInTheList.size(); i++) {
 			this.AttendeesInTheList.get(i).getAttendeeDetails();
 		}
 	}
+	
 
 }

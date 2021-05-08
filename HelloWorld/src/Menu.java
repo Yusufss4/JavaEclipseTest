@@ -40,10 +40,11 @@ class ConcertMenu implements Menu {
 			System.out.println("Menu is not selected.");
 		}
 		else {
-		 System.out.println("\nMenuStyle: "+ menuStyle);
-		 System.out.println("\nAppetizer: "+ (appetizer == null?"Appetizer is not selected":appetizer));
-		 System.out.println("\nBeverage: "+ (beverage == null?"Beverage is not selected":beverage));
-		 System.out.println("\nSandwich: "+ (beverage == null?"Sandwich is not selected":sandwich)); 
+		System.out.println("-- Menu Details --");
+		 System.out.println("MenuStyle: "+ menuStyle);
+		 System.out.println("Appetizer: "+ (appetizer == null?"Appetizer is not selected":appetizer));
+		 System.out.println("Beverage: "+ (beverage == null?"Beverage is not selected":beverage));
+		 System.out.println("Sandwich: "+ (beverage == null?"Sandwich is not selected":sandwich)); 
 		 }
 		
 	}
