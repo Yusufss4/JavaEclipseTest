@@ -35,6 +35,13 @@ public class Main {
 		exampleConcert.setSingerName("DeadMau5");
 		exampleConcert.getEventDetails();
 		
+		ConcertMenu newMenu = new ConcertMenu(); 
+		newMenu.getAvailableMenuStyles();
+		newMenu.addItemsToTheMenu("Menu1");
+		newMenu.changeMenuStyle("Menu1");
+		newMenu.getMenu();
+
+		
 	}
 
 }
