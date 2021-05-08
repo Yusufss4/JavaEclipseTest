@@ -31,7 +31,7 @@ abstract class Event {
 	};
 	
 	public float getAverageAgeForTheEvent() {
-		float averageAgeForTheEvent = AttendeeListForTheEvent.getAttendeeListSize();
+		float averageAgeForTheEvent = AttendeeListForTheEvent.getAverageAgeForTheList();
 		System.out.printf("\nAverage age for the event is -> %.2f",averageAgeForTheEvent);
 		return averageAgeForTheEvent;
 	}

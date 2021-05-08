@@ -5,14 +5,14 @@ public class Main {
 		System.out.println("\nCreating attendees -> ");
 		Attendee atnOne = new Attendee("James Smith");
 		atnOne.setAttendeeAge(26);
-		atnOne.setAttendeeEmail("jamessmith@gmail.com");
-		atnOne.setAttendeePassword("asda");
+		atnOne.setUserEmail("jamessmith@gmail.com");
+		atnOne.setUserPassword("asda");
 		atnOne.getAttendeeDetails();
 
 		Attendee atnTwo = new Attendee("Yusuf", "Savas");
 		atnTwo.setAttendeeAge(20);
-		atnTwo.setAttendeeEmail("yusufsss4@gmail.com");
-		atnTwo.setAttendeePassword("asda");
+		atnTwo.setUserEmail("yusufsss4@gmail.com");
+		atnTwo.setUserPassword("asda");
 		atnTwo.getAttendeeDetails();
 
 		System.out.println("\nAdding attendees to the list -> ");

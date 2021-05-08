@@ -1,4 +1,4 @@
-public class Attendee {
+public class Attendee extends User{
 	String AttendeeFirstName;
 	String AttendeeLastName;
 	String AttendeeFullName;
@@ -21,14 +21,7 @@ public class Attendee {
 		this.AttendeeAge = AttendeeAge;
 	}
 
-	public void setAttendeeEmail(String Email) {
-		this.Email = Email;
-	}
 
-	public void setAttendeePassword(String Password) {
-		this.Password = Password;
-	}
-	
 	public int getAttendeeAge() {
 		System.out.printf("The Attendee %s's age %d",AttendeeFullName,AttendeeAge);
 		return AttendeeAge;
