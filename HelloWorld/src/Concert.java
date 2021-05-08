@@ -2,6 +2,7 @@ public class Concert extends Event {
 	
 	protected String singerName;
 	protected int musicType;
+	protected ConcertMenu concertMenu = new ConcertMenu(); 
 
 	Concert() {
 		super.eventType = 1;
@@ -15,11 +16,22 @@ public class Concert extends Event {
 		this.musicType = musicType;
 	}
 	
-	void getEventDetails() {
+	public void setMenuStyle(ConcertMenu concertMenu) {
+		this.concertMenu = concertMenu;
+	}
+	
+	
+	public void getEventDetails() {
 		System.out.println("Event Name:" + eventName);
 		System.out.println("Event Type:" + eventType);
 		System.out.println("Singer Name:" + singerName);
+		System.out.println("Menu Details"); 
+		concertMenu.getMenu();
+		super.getAtendees();
+		
 	}
+	
+	
 
 
 }
