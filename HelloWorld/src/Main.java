@@ -22,10 +22,6 @@ public class Main {
 		richList.addAttendeeToList(atnOne);
 		richList.getAttendeeList();
 
-		// Event exampleEvent = new Event();
-		// exampleEvent.addAtendeListToTheEvent(richList);
-		// exampleEvent.getAtendees();
-
 		System.out.println("\nTesting the date -> ");
 		DateDemo.testTheDate();
 		System.out.println("\nDate test is finished -> ");
@@ -36,6 +32,8 @@ public class Main {
 		exampleConcert.setSingerName("DeadMau5");
 		exampleConcert.getEventDetails();
 		exampleConcert.getAverageAgeForTheEvent();
+		float eventTicketPrice = 13.45f;
+		exampleConcert.setEventTicketPrice(eventTicketPrice);
 
 		ConcertMenu newMenu = new ConcertMenu();
 		newMenu.getAvailableMenuStyles();
@@ -57,19 +55,26 @@ public class Main {
 		mngOne.addEmployeeToTheManager(empOne, mngOne);
 		mngOne.addEmployeeToTheManager(empTwo, mngOne);
 		mngOne.getEmployeesInTheList();
+		exampleConcert.addManagerToTheEvent(mngOne);
 
 		GregorianCalendar gcalendar = new GregorianCalendar();
-		
-		
+
 		int year = 2021;
 		int month = 12;
 		int dayOfMonth = 30;
-		int hour = 10; 
+		int hour = 10;
 		int minutes = 30;
-		
+
 		gcalendar.set(year, month, dayOfMonth, hour, minutes);
 		exampleConcert.setEventDate(gcalendar);
 		exampleConcert.getEventDateDetais();
+
+		char eventCode = 'C';
+		exampleConcert.eventCode = eventCode;
+		System.out.printf("\nEvent code of the event is -> %c", exampleConcert.eventCode);
+
+		boolean eventVisibility = true;
+		exampleConcert.isEventVisible = eventVisibility;
 
 	}
 

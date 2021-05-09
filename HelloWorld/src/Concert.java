@@ -19,6 +19,8 @@ public class Concert extends Event {
 	public void setMenuStyle(ConcertMenu concertMenu) {
 		this.concertMenu = concertMenu;
 	}
+	
+	
 
 	public void getEventDetails() {
 		System.out.println("Event Name:" + eventName);

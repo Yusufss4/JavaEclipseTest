@@ -7,7 +7,9 @@ import java.text.*; //Can be used for sorting
 
 abstract class Event {
 
-	int eventID;
+	public int eventID;
+	public char eventCode;
+	public boolean isEventVisible;
 	String eventName;
 	int managerId;
 	int participantAmount;
@@ -16,6 +18,7 @@ abstract class Event {
 	String eventLocation;
 	AttendeeList AttendeeListForTheEvent = new AttendeeList();
 	Manager managerOfTheEvent = new Manager();
+	float eventTicketPrice;
 
 	Event() {
 	} // Constructor
@@ -50,7 +53,7 @@ abstract class Event {
 	public void setEventDate(GregorianCalendar eventDate) {
 		this.eventDate = eventDate;
 	}
-	
+
 	public void getEventDateDetais() {
 		String months[] = { "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" };
 		int year;
@@ -61,15 +64,19 @@ abstract class Event {
 		System.out.print("Time: ");
 		System.out.print(eventDate.get(Calendar.HOUR) + ":");
 		System.out.print(eventDate.get(Calendar.MINUTE));
-		if(eventDate.get(Calendar.AM_PM) == 1) {
+		if (eventDate.get(Calendar.AM_PM) == 1) {
 			System.out.println("PM");
+		} else {
+			System.out.println("AM");
 		}
-		else { System.out.println("AM"); }
 	}
 
 	public void addManagerToTheEvent(Manager managerOfTheEvent) {
 		this.managerOfTheEvent = managerOfTheEvent;
+	}
 
+	public void setEventTicketPrice(float eventTicketPrice) {
+		this.eventTicketPrice = eventTicketPrice;
 	}
 
 	abstract void getEventDetails();
