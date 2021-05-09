@@ -22,7 +22,15 @@ public class Employee extends User {
 		System.out.println("Manager of the Employee:");
 		managerOfTheEmployee.getManagerDetails();
 		System.out.println("\nAttented Event of the Employee:");
-
+	}
+	
+	public void getUserDetails() {
+		System.out.println("Full Name:" + EmployeeFullName);
+		System.out.println("Age:" + EmployeeAge);
+		System.out.println("E-Mail:" + Email);
+		System.out.println("Manager of the Employee:");
+		managerOfTheEmployee.getManagerDetails();
+		System.out.println("\nAttented Event of the Employee:");
 	}
 
 	public void setEmployeeAge(int EmployeeAge) {

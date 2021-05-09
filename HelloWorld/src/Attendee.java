@@ -29,5 +29,7 @@ public class Attendee extends User{
 		System.out.println("Age:" + AttendeeAge);
 		System.out.println("E-Mail:" + Email);
 	}
+	
+	public void getUserDetails() {};
 
 }

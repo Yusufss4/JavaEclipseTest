@@ -43,6 +43,7 @@ public class Manager extends User {
 	public String getManagerFullName() {
 		return ManagerFullName;
 	}
+	public void getUserDetails() {};
 	
 	
 	

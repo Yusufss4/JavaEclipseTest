@@ -15,5 +15,11 @@ abstract class User {
 	public void setUserPassword(String Password) {
 		this.Password = Password;
 	}
-
+	
+	public String getUserEmail() {
+		return Email;
+	}
+	
+	abstract public void getUserDetails(); 
 }
+
