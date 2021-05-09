@@ -58,23 +58,18 @@ public class Main {
 		mngOne.addEmployeeToTheManager(empTwo, mngOne);
 		mngOne.getEmployeesInTheList();
 
-		String months[] = { "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" };
-
-		int year;
-		// Create a Gregorian calendar initialized
-		// with the current date and time in the
-		// default locale and timezone.
-
 		GregorianCalendar gcalendar = new GregorianCalendar();
-		gcalendar.set(2021, 12, 30, 23, 30);
-		System.out.print("Date: ");
-		System.out.print(months[gcalendar.get(Calendar.MONTH)]);
-		System.out.print(" " + gcalendar.get(Calendar.DATE) + " ");
-		System.out.println(year = gcalendar.get(Calendar.YEAR));
-		System.out.print("Time: ");
-		System.out.print(gcalendar.get(Calendar.HOUR) + ":");
-		System.out.print(gcalendar.get(Calendar.MINUTE) + ":");
-		System.out.println(gcalendar.get(Calendar.SECOND));
+		
+		
+		int year = 2021;
+		int month = 12;
+		int dayOfMonth = 30;
+		int hour = 10; 
+		int minutes = 30;
+		
+		gcalendar.set(year, month, dayOfMonth, hour, minutes);
+		exampleConcert.setEventDate(gcalendar);
+		exampleConcert.getEventDateDetais();
 
 	}
 

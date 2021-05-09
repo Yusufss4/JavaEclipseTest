@@ -1,6 +1,8 @@
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Collections;
 import java.util.Date;
+import java.util.GregorianCalendar;
 import java.text.*; //Can be used for sorting
 
 abstract class Event {
@@ -10,7 +12,7 @@ abstract class Event {
 	int managerId;
 	int participantAmount;
 	int eventType;
-	Date eventDate = new Date();
+	GregorianCalendar eventDate = new GregorianCalendar();
 	String eventLocation;
 	AttendeeList AttendeeListForTheEvent = new AttendeeList();
 	Manager managerOfTheEvent = new Manager();
@@ -45,8 +47,24 @@ abstract class Event {
 		this.eventLocation = eventLocation;
 	}
 
-	public void setDate(Date eventDate) {
+	public void setEventDate(GregorianCalendar eventDate) {
 		this.eventDate = eventDate;
+	}
+	
+	public void getEventDateDetais() {
+		String months[] = { "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" };
+		int year;
+		System.out.print("Date: ");
+		System.out.print(months[eventDate.get(Calendar.MONTH)]);
+		System.out.print(" " + eventDate.get(Calendar.DATE) + " ");
+		System.out.println(year = eventDate.get(Calendar.YEAR));
+		System.out.print("Time: ");
+		System.out.print(eventDate.get(Calendar.HOUR) + ":");
+		System.out.print(eventDate.get(Calendar.MINUTE));
+		if(eventDate.get(Calendar.AM_PM) == 1) {
+			System.out.println("PM");
+		}
+		else { System.out.println("AM"); }
 	}
 
 	public void addManagerToTheEvent(Manager managerOfTheEvent) {
