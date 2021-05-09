@@ -4,7 +4,17 @@ public class Main {
 	static List<User> users = new ArrayList<User>();
 	public static void main(String[] args) {
 
-		
+Attendee atnOne = new Attendee("James Smith");
+atnOne.setAttendeeAge(26);
+atnOne.setUserEmail("jamessmith@gmail.com");
+atnOne.setUserPassword("asda");
+atnOne.getAttendeeDetails();
+
+Attendee atnTwo = new Attendee("Yusuf", "Savas");
+atnTwo.setAttendeeAge(20);
+atnTwo.setUserEmail("yusufsss4@gmail.com");
+atnTwo.setUserPassword("asda");
+atnTwo.getAttendeeDetails();
 		
 		Scanner scnner = new Scanner(System.in);
 		System.out.println("Hello Admin! Please select one of the options:");
@@ -36,7 +46,7 @@ public class Main {
 			System.out.println("Employee Menu - Please select one of the options:");
 			System.out.println("1 - Create Employee");
 			System.out.println("2 - Get Employee Details");
-			option = scnner.nextInt(); 
+			option = scnner.nextInt();
 			switch (option) {
 			case 1: createEmployee(); break;
 			case 2: System.out.println("Please enter the e-mail of the Employee: ");
@@ -46,15 +56,16 @@ public class Main {
 			}
 			break;
 		case 3:
-			System.out.println("Manager Menu");
+			System.out.println("Manager Menu\n");
 			String fullName;
 			System.out.println("Please enter full name of the manager: ");
 			fullName = scnner.nextLine();
+			scnner.nextLine();
 			Manager mngOne = new Manager(fullName);
 			System.out.println("Please enter the age of the manager: ");
 			int age = scnner.nextInt();
 			System.out.println("Please enter the e-mail of the manager: ");
-			String email = scnner.nextLine();
+			String email = scnner.nextLine(); scnner.nextLine();
 			mngOne.setUserEmail(email);
 			System.out.println("Please create the employee that you want to assign");
 			System.out.println("Please enter full name of the employee: ");
@@ -62,38 +73,66 @@ public class Main {
 			Employee newEmp = new Employee(fullName);
 			users.add(newEmp);
 			System.out.println("Please enter the age of the employee: ");
-			age = scnner.nextInt();
+			age = scnner.nextInt(); 
 			newEmp.setEmployeeAge(age);
 			System.out.println("Please enter the e-mail of the employee: ");
-			email = scnner.nextLine();
+			email = scnner.nextLine(); scnner.nextLine();
 			newEmp.setUserEmail(email);
 			mngOne.addEmployeeToTheManager(newEmp, mngOne);
 			mngOne.getManagerDetails();
+			mngOne.getEmployeesInTheList();
 			break;
 		case 4:
-			
+			AttendeeList newList = new AttendeeList();
+			newList.addAttendeeToList(atnOne);
+			newList.getAttendeeList();
+			Concert exampleConcert1 = new Concert();
+			System.out.println("");
+			System.out.println("Event Menu\n");
+			System.out.println("");
+			System.out.print("Please enter full name of the event: ");
+			String eventName = scnner.nextLine();
+			exampleConcert1.setEventName(eventName);
+			AttendeeList newList2 = new AttendeeList();
+			newList2.addAttendeeToList(atnOne);
+			System.out.println("");
+			System.out.print("Please enter full name of the signer: ");
+			String singerName = scnner.nextLine();
+			exampleConcert1.setSingerName(singerName);
+			System.out.println("");
+			System.out.print("Please enter ticket price of the event: ");
+			float ticketPrice;
+			ticketPrice = scnner.nextFloat();
+			exampleConcert1.setEventTicketPrice(ticketPrice);
+			System.out.println("");
+			System.out.print("Please enter event code: ");
+			char eventCode = scnner.next().charAt(0);
+			exampleConcert1.eventCode = eventCode;
+			System.out.println("");
+			System.out.print("Please enter event visibility: ");
+			boolean eventVisibility = scnner.nextBoolean();
+			exampleConcert1.isEventVisible = eventVisibility;
 			break;
 		default:
 			System.out.println("Wrong option is selected.");
 		}
 		
-	
-//		Attendee atnOne = new Attendee("James Smith");
-//		atnOne.setAttendeeAge(26);
-//		atnOne.setUserEmail("jamessmith@gmail.com");
-//		atnOne.setUserPassword("asda");
-//		atnOne.getAttendeeDetails();
 
-//		Attendee atnTwo = new Attendee("Yusuf", "Savas");
+//		System.out.println("\nCreating attendees -> ");
+//		Attendee atnOne = new Attendee("Attendee Caner");
+//		atnOne.setAttendeeAge(26);
+//		atnOne.setUserEmail("caner@gmail.com");
+//		atnOne.setUserPassword("asda");
+//		
+//		Attendee atnTwo = new Attendee("Attendee", "Yusuf");
 //		atnTwo.setAttendeeAge(20);
 //		atnTwo.setUserEmail("yusufsss4@gmail.com");
 //		atnTwo.setUserPassword("asda");
-//		atnTwo.getAttendeeDetails();
-//
+//		
 //		System.out.println("\nAdding attendees to the list -> ");
 //		AttendeeList newList = new AttendeeList();
 //		newList.addAttendeeToList(atnOne);
-//		newList.getAttendeeList();
+//		newList.addAttendeeToList(atnTwo);
 //
 //		Concert exampleConcert = new Concert();
 //		exampleConcert.setEventName("Colorify");
@@ -110,20 +149,18 @@ public class Main {
 //		newMenu.getMenu();
 //		exampleConcert.setMenuStyle(newMenu);
 //
-//		Employee empOne = new Employee("John Doe Emp");
+//		Employee empOne = new Employee("Employee Bengi");
 //		empOne.setEmployeeAge(23);
 //		empOne.setUserEmail("johndoe@gmail.com");
-//		empOne.getEmployeeDetails();
-//
-//		Employee empTwo = new Employee("Emp", "2");
+//		
+//		Employee empTwo = new Employee("Employee", "Emiralp");
 //		empTwo.setEmployeeAge(21);
 //		empTwo.setUserEmail("emp@gmail.com");
 //		empTwo.getEmployeeDetails();
 //
-//		Manager mngOne = new Manager("Manager","Manager");
+//		Manager mngOne = new Manager("Manager","Efe");
 //		mngOne.addEmployeeToTheManager(empOne, mngOne);
 //		mngOne.addEmployeeToTheManager(empTwo, mngOne);
-//		mngOne.getEmployeesInTheList();
 //		exampleConcert.addManagerToTheEvent(mngOne);
 //
 //		GregorianCalendar gcalendar = new GregorianCalendar();
@@ -145,6 +182,15 @@ public class Main {
 //		boolean eventVisibility = true;
 //		exampleConcert.isEventVisible = eventVisibility;
 //		
+//		System.out.println("\n== DETAILS OF A ATTENDEE ==");
+//		atnTwo.getAttendeeDetails();
+//		System.out.println("\n== ATTENDEE LIST OF EVENT ==");
+//		newList.getAttendeeList();
+//		System.out.println("\n== EMPLOYEE DETAIL ==");
+//		empOne.getEmployeeDetails();
+//		System.out.println("\n== EMPLOYEES OF MANAGER ==");
+//		mngOne.getEmployeesInTheList();
+//		System.out.print("\n== EVENT DETAILS ==");
 //		exampleConcert.getEventDetails();
 	}
 

@@ -37,7 +37,7 @@ public class Manager extends User {
 	}
 	
 	public void getManagerDetails() {
-		System.out.println("Manager Name:"+ ManagerFullName);
+		System.out.println(""+ ManagerFullName);
 	}
 	
 	public String getManagerFullName() {
