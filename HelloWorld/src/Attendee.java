@@ -2,8 +2,6 @@ public class Attendee extends User{
 	String AttendeeFirstName;
 	String AttendeeLastName;
 	String AttendeeFullName;
-	String Password;
-	String Email;
 	int AttendeeAge;
 
 //Constructor Method 
@@ -14,7 +12,7 @@ public class Attendee extends User{
 	public Attendee(String AttendeeFirstName, String AttendeeLastName) {
 		this.AttendeeFirstName = AttendeeFirstName;
 		this.AttendeeLastName = AttendeeLastName;
-		AttendeeFullName = AttendeeFirstName + AttendeeLastName;
+		AttendeeFullName = AttendeeFirstName +" "+ AttendeeLastName;
 	}
 
 	public void setAttendeeAge(int AttendeeAge) {

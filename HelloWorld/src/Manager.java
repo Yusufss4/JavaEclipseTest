@@ -17,7 +17,7 @@ public class Manager extends User {
 	public Manager(String ManagerFirstName, String ManagerLastName) {
 		this.ManagerFirstName = ManagerFirstName;
 		this.ManagerLastName = ManagerLastName;
-		ManagerFullName = ManagerFirstName + ManagerLastName;
+		ManagerFullName = ManagerFirstName +" "+ ManagerLastName;
 	}
 	
 	public void addEmployeeToTheManager(Employee newEmployee,Manager managerOfTheEmployee) {
@@ -38,6 +38,10 @@ public class Manager extends User {
 	
 	public void getManagerDetails() {
 		System.out.println("Manager Name:"+ ManagerFullName);
+	}
+	
+	public String getManagerFullName() {
+		return ManagerFullName;
 	}
 	
 	

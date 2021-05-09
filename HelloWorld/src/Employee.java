@@ -12,7 +12,7 @@ public class Employee extends User {
 	public Employee(String EmployeeFirstName, String EmployeeLastName) {
 		this.EmployeeFirstName = EmployeeFirstName;
 		this.EmployeeLastName = EmployeeLastName;
-		EmployeeFullName = EmployeeFirstName + EmployeeLastName;
+		EmployeeFullName = EmployeeFirstName +" "+ EmployeeLastName;
 	}
 
 	public void getEmployeeDetails() {

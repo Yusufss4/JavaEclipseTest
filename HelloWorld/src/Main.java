@@ -17,20 +17,14 @@ public class Main {
 		atnTwo.getAttendeeDetails();
 
 		System.out.println("\nAdding attendees to the list -> ");
-		AttendeeList richList = new AttendeeList();
-		richList.PopulateExampleAtendeeList();
-		richList.addAttendeeToList(atnOne);
-		richList.getAttendeeList();
-
-		System.out.println("\nTesting the date -> ");
-		DateDemo.testTheDate();
-		System.out.println("\nDate test is finished -> ");
+		AttendeeList newList = new AttendeeList();
+		newList.addAttendeeToList(atnOne);
+		newList.getAttendeeList();
 
 		Concert exampleConcert = new Concert();
 		exampleConcert.setEventName("Colorify");
-		exampleConcert.addAtendeListToTheEvent(richList);
+		exampleConcert.addAtendeListToTheEvent(newList);
 		exampleConcert.setSingerName("DeadMau5");
-		exampleConcert.getEventDetails();
 		exampleConcert.getAverageAgeForTheEvent();
 		float eventTicketPrice = 13.45f;
 		exampleConcert.setEventTicketPrice(eventTicketPrice);
@@ -40,6 +34,7 @@ public class Main {
 		newMenu.addItemsToTheMenu("Menu1");
 		newMenu.changeMenuStyle("Menu1");
 		newMenu.getMenu();
+		exampleConcert.setMenuStyle(newMenu);
 
 		Employee empOne = new Employee("John Doe Emp");
 		empOne.setEmployeeAge(23);
@@ -51,7 +46,7 @@ public class Main {
 		empTwo.setUserEmail("emp@gmail.com");
 		empTwo.getEmployeeDetails();
 
-		Manager mngOne = new Manager("Manager", "Manager");
+		Manager mngOne = new Manager("Manager","Manager");
 		mngOne.addEmployeeToTheManager(empOne, mngOne);
 		mngOne.addEmployeeToTheManager(empTwo, mngOne);
 		mngOne.getEmployeesInTheList();
@@ -71,10 +66,12 @@ public class Main {
 
 		char eventCode = 'C';
 		exampleConcert.eventCode = eventCode;
-		System.out.printf("\nEvent code of the event is -> %c", exampleConcert.eventCode);
+		System.out.printf("\nEvent code of the event is -> %c\n", exampleConcert.eventCode);
 
 		boolean eventVisibility = true;
 		exampleConcert.isEventVisible = eventVisibility;
+		
+		exampleConcert.getEventDetails();
 
 	}
 

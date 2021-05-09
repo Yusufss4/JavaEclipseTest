@@ -9,7 +9,7 @@ abstract class Event {
 
 	public int eventID;
 	public char eventCode;
-	public boolean isEventVisible;
+	public boolean isEventVisible = true; //True until changed.
 	String eventName;
 	int managerId;
 	int participantAmount;
@@ -28,7 +28,6 @@ abstract class Event {
 	}
 
 	public void getAtendees() {
-		System.out.println("\nAttendees in the event");
 		AttendeeListForTheEvent.getAttendeeList();
 	}
 
