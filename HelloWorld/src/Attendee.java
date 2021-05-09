@@ -21,9 +21,8 @@ public class Attendee extends User{
 		this.AttendeeAge = AttendeeAge;
 	}
 
-
 	public int getAttendeeAge() {
-		System.out.printf("The Attendee %s's age %d",AttendeeFullName,AttendeeAge);
+		System.out.printf("The Attendee %s's age %d", AttendeeFullName, AttendeeAge);
 		return AttendeeAge;
 	}
 

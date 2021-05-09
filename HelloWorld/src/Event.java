@@ -13,6 +13,7 @@ abstract class Event {
 	Date eventDate = new Date();
 	String eventLocation;
 	AttendeeList AttendeeListForTheEvent = new AttendeeList();
+	Manager managerOfTheEvent = new Manager();
 
 	Event() {
 	} // Constructor
@@ -29,10 +30,10 @@ abstract class Event {
 	public int getAttendeeNumber() {
 		return AttendeeListForTheEvent.getAttendeeListSize();
 	};
-	
+
 	public float getAverageAgeForTheEvent() {
 		float averageAgeForTheEvent = AttendeeListForTheEvent.getAverageAgeForTheList();
-		System.out.printf("\nAverage age for the event is -> %.2f",averageAgeForTheEvent);
+		System.out.printf("\nAverage age for the event is -> %.2f", averageAgeForTheEvent);
 		return averageAgeForTheEvent;
 	}
 
@@ -48,11 +49,11 @@ abstract class Event {
 		this.eventDate = eventDate;
 	}
 
-	public void setManagerId(int managerId) {
-		this.managerId = managerId;
-	}
-	
-	abstract void getEventDetails();
+	public void addManagerToTheEvent(Manager managerOfTheEvent) {
+		this.managerOfTheEvent = managerOfTheEvent;
 
+	}
+
+	abstract void getEventDetails();
 
 }
